@@ -1,0 +1,34 @@
+CONFIG_NAME: '3stages'
+
+DATASET_NAME: 'flowers'
+EMBEDDING_TYPE: 'cnn-rnn'
+DATA_DIR: '../data/flowers'
+GPU_ID: '0' # 3
+WORKERS: 4
+
+TREE:
+    BRANCH_NUM: 2 # 3
+
+
+TEST:
+    B_EXAMPLE: False
+
+
+TRAIN:
+    FLAG: False
+#    NET_G: '../models/birds_3stages/netG_210000.pth'
+#    NET_G: '../output/flowers_3stages_color_2021_05_20_15_42_53/Model/netG_112000.pth'
+#    NET_G: '../output/flowers_3stages_color_2021_08_22_20_51_51/Model/netG_100000.pth'
+#    NET_G: '../output/flowers_3stages_color_2021_08_24_14_53_18/Model/netG_100000.pth'
+#    NET_G: '../output/flowers_3stages_color_2021_08_27_16_58_43/Model/netG_120000.pth'
+    NET_G: '../output/flowers_3stages_color_2021_08_28_09_24_18/Model/netG_120000.pth'
+    BATCH_SIZE: 16  #24
+
+
+GAN:
+    EMBEDDING_DIM: 128
+    DF_DIM: 64
+    GF_DIM: 64
+    Z_DIM: 100
+    R_NUM: 2
+    B_CONDITION: True
